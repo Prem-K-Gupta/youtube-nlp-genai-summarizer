@@ -43,7 +43,6 @@ def generate_pdf(summary, concepts, sentiment_label, sentiment_score, sentiment_
     pdf_memory.seek(0)
     return pdf_memory
 
-
 def generate_and_save_pdf(summary, concepts, sentiment_label, sentiment_score, sentiment_explanation, topics, insights, filename):
     """
     Generate a PDF file and save it to a specific directory.

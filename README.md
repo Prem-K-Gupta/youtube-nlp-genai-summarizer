@@ -65,4 +65,3 @@ youtube-summarizer/
 1. Some YouTube videos might not have transcripts available.
 2. The summarization might fail for excessively long transcripts due to token limits. Chunking is already implemented to mitigate this issue.
 
-
