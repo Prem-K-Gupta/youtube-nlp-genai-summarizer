@@ -175,6 +175,19 @@ if start_analysis:
             progress.progress(100)
             st.success("Contextual insights fetched!")
 
+            # Display contextual insights
+            st.markdown(
+                f"""
+                <div style="background-color: #e9ffe9; padding: 15px; border-radius: 10px; margin-bottom: 15px;">
+                    <h2>🔍 Contextual Insights</h2>
+                    <ul style="list-style-type: disc; margin-left: 20px;">
+                        {''.join([f'<li><b>{concept}:</b> {info}</li>' for concept, info in insights.items()])}
+                    </ul>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+
             import re
 
             # Function to extract video ID
