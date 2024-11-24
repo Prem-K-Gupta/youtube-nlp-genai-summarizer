@@ -1,4 +1,4 @@
-This is the language coverage file for DejaVu fonts
+This is the language coverage file for DejaVu fonts 
 ($Id$)
 
                                                 Sans               Serif              Sans Mono          
