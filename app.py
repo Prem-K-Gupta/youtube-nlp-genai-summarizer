@@ -1,3 +1,24 @@
+import os
+import subprocess
+import sys
+
+# Automatically install requirements
+def install_requirements():
+    requirements_path = os.path.join(os.path.dirname(__file__), "requirements.txt")
+    if os.path.exists(requirements_path):
+        try:
+            print("Installing dependencies from requirements.txt...")
+            subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", requirements_path])
+            print("Dependencies installed successfully!")
+        except subprocess.CalledProcessError as e:
+            print(f"Error installing dependencies: {e}")
+            sys.exit(1)
+    else:
+        print("requirements.txt not found. Please ensure it is in the same directory as app.py.")
+        sys.exit(1)
+
+install_requirements()
+
 import streamlit as st
 from utils.text_analysis import (
     get_transcript,
