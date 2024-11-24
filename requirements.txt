@@ -4,3 +4,4 @@ transformers
 google-generativeai
 python-dotenv
 fpdf2
+torch
